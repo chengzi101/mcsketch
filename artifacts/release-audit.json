@@ -1,0 +1,92 @@
+{
+  "reviewed_file_count": 119,
+  "largest_file_bytes": 928975,
+  "credential_signature_findings": [],
+  "configured_token_bytes_checked": true,
+  "gitignore_checks": {
+    ".env": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    ".env.local": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    ".env.production": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    "backend/.env": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    "live-bindings.json": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    "live-bindings-backup.json": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    "private/live-acceptance.json": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    ".pnpm-store/v3/cache.bin": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    ".cache/huggingface/weights.bin": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    ".venv/pyvenv.cfg": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    "frontend/node_modules/a.js": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    "artifacts/private/raw-response.json": {
+      "ignored": true,
+      "expected_ignored": true,
+      "passed": true
+    },
+    ".env.example": {
+      "ignored": false,
+      "expected_ignored": false,
+      "passed": true
+    },
+    "mcp-config.example.json": {
+      "ignored": false,
+      "expected_ignored": false,
+      "passed": true
+    },
+    "docs/live-bindings.schema.json": {
+      "ignored": false,
+      "expected_ignored": false,
+      "passed": true
+    },
+    "scripts/release-manifest.json": {
+      "ignored": false,
+      "expected_ignored": false,
+      "passed": true
+    }
+  },
+  "official_declaration_exact": true,
+  "declaration_sha256": "cd28101bcb29cc8fb24b372fe91ce6b42c4a1487a54e01f7ade0c8c6a84241b7",
+  "scope": "Reviewed manifest, configured token bytes in all file types, credential signatures and Git ignore behavior; not a guarantee against all secret formats",
+  "passed": true
+}

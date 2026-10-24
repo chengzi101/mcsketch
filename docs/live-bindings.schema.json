@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "McSketch local response mapping, NOT official MCP schema",
+  "type": "object",
+  "required": ["stores", "menu", "quote"],
+  "properties": {
+    "stores": {"allOf":[{"$ref":"#/$defs/call"}],"required":["items","id","name","address"],"properties":{"tool":{"const":"query-nearby-stores"},"items":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"address":{"type":"string"}}},
+    "menu": {"allOf":[{"$ref":"#/$defs/call"}],"required":["items","id","name"],"properties":{"tool":{"const":"query-meals"},"items":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"price":{"type":"string"},"price_unit":{"enum":["yuan","cents"]}}},
+    "quote": {"allOf":[{"$ref":"#/$defs/call"}],"required":["amount","amount_unit"],"properties":{"tool":{"const":"calculate-price"},"amount":{"type":"string"},"amount_unit":{"enum":["yuan","cents"]}}},
+    "detail": {"allOf":[{"$ref":"#/$defs/call"}],"properties":{"tool":{"const":"query-meal-detail"},"tags":{"type":"string"}}},
+    "nutrition": {"allOf":[{"$ref":"#/$defs/call"}],"required":["items","name"],"properties":{"tool":{"const":"list-nutrition-foods"},"items":{"type":"string"},"name":{"type":"string"},"kcal":{"type":"string"},"protein":{"type":"string"},"fat":{"type":"string"}}}
+  },
+  "$defs": {"call":{"type":"object","required":["tool","arguments"],"dependentRequired":{"success_path":["success_value"]},"properties":{"tool":{"type":"string"},"arguments":{"type":"object"},"success_path":{"type":"string"},"success_value":{}}}}
+}

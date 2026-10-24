@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24",
+  "environment": "Local Codex in-app browser, actual Canvas pointer interaction",
+  "checks": {
+    "burger_draw_recognize_confirm_match_cart": "passed",
+    "fries_draw_recognize_confirm_match_cart": "passed",
+    "eraser_changes_png": "passed",
+    "undo_restores_original_png_bytes": "passed",
+    "demo_48_to_30_budget_three_plans": "passed: 2900, 2500, 2900 cents",
+    "apply_plan_and_requote": "passed: 2500 cents",
+    "cart_change_invalidates_quote": "passed",
+    "share_png_preview": "passed",
+    "drawing_png_preview": "passed",
+    "native_os_download_receipt": "verified via browser downloadMedia: PNG in Downloads, 47276 bytes, equals preview",
+    "mobile_390x844_horizontal_overflow": "none observed",
+    "physical_touchscreen": "not tested",
+    "missing_token_recovery": "passed",
+    "official_authenticated_mcp": "not tested: no token",
+    "empty_menu_browser_fixture": "passed: separate empty Demo fixture, not official store",
+    "locked_over_budget_infeasible": "passed: 2 locked burgers cost 4600 cents, budget 3000, no feasible plans",
+    "mcp_dialog_error_visible": "passed",
+    "console_javascript_errors": "none observed",
+    "current_viewport_override": "not effective; 320-pixel recheck not claimed"
+  }
+}

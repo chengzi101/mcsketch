@@ -1,0 +1,92 @@
+{
+  "checked_at": "2026-10-24T09:33:53.196670+00:00",
+  "authenticated_business_chain": true,
+  "tool_calls": {
+    "query-nearby-stores": {
+      "successful_calls": 1,
+      "failed_calls": 0
+    },
+    "query-meals": {
+      "successful_calls": 1,
+      "failed_calls": 0
+    },
+    "query-meal-detail": {
+      "successful_calls": 9,
+      "failed_calls": 0
+    },
+    "list-nutrition-foods": {
+      "successful_calls": 1,
+      "failed_calls": 0
+    },
+    "calculate-price": {
+      "successful_calls": 23,
+      "failed_calls": 0
+    }
+  },
+  "stages": [
+    {
+      "stage": "tools/list",
+      "status": "passed",
+      "tools": [
+        "query-meals",
+        "query-nearby-stores",
+        "calculate-price",
+        "list-nutrition-foods",
+        "query-meal-detail"
+      ]
+    },
+    {
+      "stage": "nearby_stores",
+      "status": "passed",
+      "count": 5
+    },
+    {
+      "stage": "available_menu",
+      "status": "passed",
+      "count": 126
+    },
+    {
+      "stage": "category_match",
+      "status": "passed",
+      "count": 3
+    },
+    {
+      "stage": "detail_nutrition",
+      "status": "passed",
+      "nutrition_present": true
+    },
+    {
+      "stage": "calculate_price",
+      "status": "passed",
+      "amount_cents": 4850
+    },
+    {
+      "stage": "repair_requote",
+      "status": "passed",
+      "plans": [
+        {
+          "strategy": "A",
+          "status": "passed",
+          "amount_cents": 4000,
+          "within_budget": true,
+          "changed_from_original": true
+        },
+        {
+          "strategy": "B",
+          "status": "passed",
+          "amount_cents": 3800,
+          "within_budget": true,
+          "changed_from_original": true
+        },
+        {
+          "strategy": "C",
+          "status": "passed",
+          "amount_cents": 4650,
+          "within_budget": true,
+          "changed_from_original": true
+        }
+      ]
+    }
+  ],
+  "status": "passed"
+}

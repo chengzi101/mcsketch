@@ -1,0 +1,140 @@
+[
+  {
+    "file": "burger-simple.png",
+    "expected": "burger",
+    "complexity": "simple",
+    "kind": "food"
+  },
+  {
+    "file": "burger-clean.png",
+    "expected": "burger",
+    "complexity": "clean",
+    "kind": "food"
+  },
+  {
+    "file": "burger-cluttered.png",
+    "expected": "burger",
+    "complexity": "cluttered",
+    "kind": "food"
+  },
+  {
+    "file": "fries-simple.png",
+    "expected": "fries",
+    "complexity": "simple",
+    "kind": "food"
+  },
+  {
+    "file": "fries-clean.png",
+    "expected": "fries",
+    "complexity": "clean",
+    "kind": "food"
+  },
+  {
+    "file": "fries-cluttered.png",
+    "expected": "fries",
+    "complexity": "cluttered",
+    "kind": "food"
+  },
+  {
+    "file": "icecream-simple.png",
+    "expected": "icecream",
+    "complexity": "simple",
+    "kind": "food"
+  },
+  {
+    "file": "icecream-clean.png",
+    "expected": "icecream",
+    "complexity": "clean",
+    "kind": "food"
+  },
+  {
+    "file": "icecream-cluttered.png",
+    "expected": "icecream",
+    "complexity": "cluttered",
+    "kind": "food"
+  },
+  {
+    "file": "drink-simple.png",
+    "expected": "drink",
+    "complexity": "simple",
+    "kind": "food"
+  },
+  {
+    "file": "drink-clean.png",
+    "expected": "drink",
+    "complexity": "clean",
+    "kind": "food"
+  },
+  {
+    "file": "drink-cluttered.png",
+    "expected": "drink",
+    "complexity": "cluttered",
+    "kind": "food"
+  },
+  {
+    "file": "nuggets-simple.png",
+    "expected": "nuggets",
+    "complexity": "simple",
+    "kind": "food"
+  },
+  {
+    "file": "nuggets-clean.png",
+    "expected": "nuggets",
+    "complexity": "clean",
+    "kind": "food"
+  },
+  {
+    "file": "nuggets-cluttered.png",
+    "expected": "nuggets",
+    "complexity": "cluttered",
+    "kind": "food"
+  },
+  {
+    "file": "coffee-simple.png",
+    "expected": "coffee",
+    "complexity": "simple",
+    "kind": "food"
+  },
+  {
+    "file": "coffee-clean.png",
+    "expected": "coffee",
+    "complexity": "clean",
+    "kind": "food"
+  },
+  {
+    "file": "coffee-cluttered.png",
+    "expected": "coffee",
+    "complexity": "cluttered",
+    "kind": "food"
+  },
+  {
+    "file": "house.png",
+    "expected": "unknown",
+    "complexity": "negative",
+    "kind": "nonfood"
+  },
+  {
+    "file": "star.png",
+    "expected": "unknown",
+    "complexity": "negative",
+    "kind": "nonfood"
+  },
+  {
+    "file": "scribble.png",
+    "expected": "unknown",
+    "complexity": "negative",
+    "kind": "nonfood"
+  },
+  {
+    "file": "circle.png",
+    "expected": "unknown",
+    "complexity": "negative",
+    "kind": "nonfood"
+  },
+  {
+    "file": "blank.png",
+    "expected": "blank",
+    "complexity": "negative",
+    "kind": "blank"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "mode": "demo",
+  "store_id": "demo-studio",
+  "items": [{"id":"b1","qty":1},{"id":"f1","qty":1},{"id":"d1","qty":1}],
+  "budget_cents": 3000,
+  "locked_ids": [],
+  "favorite_ids": ["b1"],
+  "avoid": [],
+  "max_kcal": null
+}

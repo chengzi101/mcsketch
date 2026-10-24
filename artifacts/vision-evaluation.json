@@ -1,0 +1,184 @@
+[
+  {
+    "status": "ok",
+    "model": "openai/clip-vit-base-patch32",
+    "candidates": [
+      {
+        "category": "burger",
+        "label": "汉堡",
+        "score": 0.99943
+      },
+      {
+        "category": "fries",
+        "label": "薯条",
+        "score": 0.0005
+      },
+      {
+        "category": "nuggets",
+        "label": "鸡块",
+        "score": 2e-05
+      }
+    ],
+    "uncertain": false,
+    "message": "模型评分不是准确率，请确认类别后匹配餐品。",
+    "sample": "burger.png",
+    "expected": "burger",
+    "seconds": 8.74
+  },
+  {
+    "status": "ok",
+    "model": "openai/clip-vit-base-patch32",
+    "candidates": [
+      {
+        "category": "coffee",
+        "label": "咖啡",
+        "score": 0.80977
+      },
+      {
+        "category": "drink",
+        "label": "饮料",
+        "score": 0.1894
+      },
+      {
+        "category": "burger",
+        "label": "汉堡",
+        "score": 0.00023
+      }
+    ],
+    "uncertain": false,
+    "message": "模型评分不是准确率，请确认类别后匹配餐品。",
+    "sample": "coffee.png",
+    "expected": "coffee",
+    "seconds": 0.1
+  },
+  {
+    "status": "ok",
+    "model": "openai/clip-vit-base-patch32",
+    "candidates": [
+      {
+        "category": "drink",
+        "label": "饮料",
+        "score": 0.99863
+      },
+      {
+        "category": "coffee",
+        "label": "咖啡",
+        "score": 0.00132
+      },
+      {
+        "category": "fries",
+        "label": "薯条",
+        "score": 1e-05
+      }
+    ],
+    "uncertain": false,
+    "message": "模型评分不是准确率，请确认类别后匹配餐品。",
+    "sample": "drink.png",
+    "expected": "drink",
+    "seconds": 0.11
+  },
+  {
+    "status": "ok",
+    "model": "openai/clip-vit-base-patch32",
+    "candidates": [
+      {
+        "category": "fries",
+        "label": "薯条",
+        "score": 0.95726
+      },
+      {
+        "category": "drink",
+        "label": "饮料",
+        "score": 0.01125
+      },
+      {
+        "category": "coffee",
+        "label": "咖啡",
+        "score": 0.00756
+      }
+    ],
+    "uncertain": false,
+    "message": "模型评分不是准确率，请确认类别后匹配餐品。",
+    "sample": "fries.png",
+    "expected": "fries",
+    "seconds": 0.1
+  },
+  {
+    "status": "ok",
+    "model": "openai/clip-vit-base-patch32",
+    "candidates": [
+      {
+        "category": "icecream",
+        "label": "冰淇淋",
+        "score": 0.99878
+      },
+      {
+        "category": "fries",
+        "label": "薯条",
+        "score": 0.00062
+      },
+      {
+        "category": "drink",
+        "label": "饮料",
+        "score": 0.00025
+      }
+    ],
+    "uncertain": false,
+    "message": "模型评分不是准确率，请确认类别后匹配餐品。",
+    "sample": "icecream.png",
+    "expected": "icecream",
+    "seconds": 0.1
+  },
+  {
+    "status": "ok",
+    "model": "openai/clip-vit-base-patch32",
+    "candidates": [
+      {
+        "category": "nuggets",
+        "label": "鸡块",
+        "score": 0.42931
+      },
+      {
+        "category": "coffee",
+        "label": "咖啡",
+        "score": 0.24695
+      },
+      {
+        "category": "fries",
+        "label": "薯条",
+        "score": 0.1643
+      }
+    ],
+    "uncertain": true,
+    "message": "这张画有点难猜，请手动确认或纠正类别。",
+    "sample": "nuggets.png",
+    "expected": "nuggets",
+    "seconds": 0.09
+  },
+  {
+    "status": "ok",
+    "model": "openai/clip-vit-base-patch32",
+    "candidates": [
+      {
+        "category": "burger",
+        "label": "汉堡",
+        "score": 0.00257
+      },
+      {
+        "category": "coffee",
+        "label": "咖啡",
+        "score": 0.00084
+      },
+      {
+        "category": "icecream",
+        "label": "冰淇淋",
+        "score": 0.00043
+      }
+    ],
+    "uncertain": true,
+    "message": "这张画有点难猜，请手动确认或纠正类别。",
+    "sample": "unknown.png",
+    "expected": "unknown",
+    "seconds": 0.09
+  }
+]
