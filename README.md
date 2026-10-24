@@ -4,8 +4,6 @@
 
 一款把手绘、真实视觉模型、菜单匹配和预算约束搜索连接起来的创意餐单助手。面向想轻松表达“今天想吃什么”的用户，也面向希望复用该工作流的智能体。
 
-**2026-10-24 参赛验收：后端 109 项、前端 7 项通过，构建通过；23 张扩展视觉样本中食物 Top-1 为 17/18，保留一个未触发不确定提示的误判案例。真实 MCP 五个工具和完整业务链路已认证实测通过；原单 ¥48.50，预算 ¥47，三方案官方复核 ¥40/¥38/¥46.50。** 详见 [验收报告](docs/ACCEPTANCE_REPORT.md) 和 [正式提交步骤](docs/CONTEST_SUBMISSION.md)。
-
 > 独立创意参赛项目，非麦当劳官方产品。Demo 菜单名称、价格、营养和门店均为合成演示数据，不代表官方在售商品。首版只查询、推荐和核价，不创建订单或支付。
 
 ![实际工作台截图](docs/screenshots/desktop.png)
@@ -39,7 +37,7 @@ cd ..
 .\.venv\Scripts\python.exe -X utf8 -m backend.app
 ```
 
-打开 **http://127.0.0.1:5173**。首次识别自动下载约 605 MB 模型权重，需联网；缓存位于 `.cache/huggingface`，不提交 Git。也可以先在手动模式体验。装好并构建后，Windows 双击 `start.cmd` 再次启动。
+缓存位于 `.cache/huggingface`，不提交 Git。也可以先在手动模式体验。装好并构建后，Windows 双击 `start.cmd` 再次启动。
 
 npm 用户可用 `npm install` / `npm run build` / `npm test` 代替 pnpm；本次实际测试使用 pnpm，提交了对应锁文件。Vite 配置使用 runner 加载，以兼容本次 Windows 沙箱环境。
 
@@ -72,7 +70,6 @@ MCD_MCP_TOKEN=你从官方平台取得的个人Token
 
 重启后端，在「连接官方 MCP」读取真实 schema 并测试只读调用。Token 不发送到前端，不进入打包文件或日志。当前内置适配依据 2026-10-24 真实响应，无需自行建立 live-bindings.json。输入“城市 位置关键词”（空格分隔）查询门店，成功读取菜单后启用 Live。页面实测见 [Live 联调报告](docs/LIVE_INTEGRATION_REPORT.md)，包含真实核价截图与失败说明。完整验证步骤见 [MCP_INTEGRATION.md](MCP_INTEGRATION.md)。`mcp-config.example.json` 中的环境变量占位符需由所用 MCP 客户端支持替换，不是放真实凭据的模板。
 
-官方资料核对： [比赛仓库](https://github.com/M-China/mcd-developer-innovation-challenge)、[完整规则](https://github.com/M-China/mcd-developer-innovation-challenge/blob/main/activityGuidelines.md)、[官方 MCP 文档](https://github.com/M-China/mcd-mcp-server)、[开放平台](https://open.mcd.cn/mcp)。按当前官方规则，截止北京时间 **2026-10-25 23:59**，项目须真实使用官方 MCP 并公开 GitHub 仓库。本次已完成有效 Token 只读联调；公开仓库上传、个人资格与声明确认、报名仍需参赛者完成。
 
 ## 创新点与技术实现
 
@@ -123,13 +120,5 @@ cd ..
 
 已在真实浏览器画板上画过汉堡，模型 Top-1 汉堡评分 0.929，确认后出现菜单；购物车、48→30 元修复、方案采用、报价失效及 PNG 预览已检查。移动布局是浏览器尺寸模拟，未在物理触屏设备上验证。没有编造真实接口成功、性能基准或截图。
 
-## 限制
-
-- 没有在独立大规模涂鸦数据集上评测；模型评分不是准确率，低分应人工确认。
-- 扩展测试发现带杂线咖啡图被高分误判为饮料；当前阈值无法发现所有误判，因此所有候选均需用户确认。
-- 已认证验证到店取餐默认规格链路，不能外推为所有门店、配送、预约、优惠券和复杂自定义规格均可用。
-- 首版最多 6 份餐品；枚举最多 100,000 组；Live 每槽位最多原品 + 两个同类低参考价替代品，去重候选最多 36 组；逐组官方核价，不声称全菜单最优；超时或超量停止。
-- 仅适用于本机单人体验。刷新清空画作/购物车；没有账户、数据库、订单、支付、外卖地址保存或云端托管。
-- Demo 数据不适用于饮食、过敏原或真实购买决策；Live 缺失信息仍可能需要用户向官方核实。
 
 原创代码及 SVG 采用 MIT；依赖、模型、商标与官方文件沿用各自条款。官方原版 [CONTEST_DECLARATION.md](CONTEST_DECLARATION.md) 从比赛仓库原样下载，发布和报名需由参赛者自行确认内容真实。
